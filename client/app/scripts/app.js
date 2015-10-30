@@ -16,7 +16,7 @@ angular
   ])
   .config(function ($routeProvider, RestangularProvider) {
     //set base url
-    RestangularProvider.setBaseUrl('http://localhost:3000');
+    RestangularProvider.setBaseUrl('https://evening-river-8589.herokuapp.com');
 
     $routeProvider
       .when('/', {
@@ -42,10 +42,5 @@ angular
       })
       .factory('Movie', function(MovieRestAngular) {
         return MovieRestAngular.service('movie');
-      })
-      .filter('trusted', function ($sce) {
-    return function(url) {
-      return $sce.trustAsResourceUrl(url);
-    };
-  });
- 
+      });
+      
