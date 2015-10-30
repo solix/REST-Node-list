@@ -25,7 +25,7 @@ app.use(function(req,res,next){
 
 //connecting mongodb and starting server at port 3000
 mongoose.connect(
-  process.env.MONGOLAB_URI);
+  process.env.MONGOLAB_URI || "mongodb://localhost/meanapp");
 mongoose.connection.once('open' , function(){
    
    //load the models
