@@ -16,7 +16,7 @@ angular
   ])
   .config(function ($routeProvider, RestangularProvider) {
     //set base url
-    RestangularProvider.setBaseUrl('https://evening-river-8589.herokuapp.com');
+    RestangularProvider.setBaseUrl("https://evening-river-8589.herokuapp.com");
 
     $routeProvider
       .when('/', {
